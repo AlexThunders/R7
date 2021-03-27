@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>localstorage</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="localstorage.js" defer></script>
+  <link rel="stylesheet" href="localstorage.css">
+  <link rel="icon" href="./todoIcon.svg">
+  <script src="https://kit.fontawesome.com/f3b0be53d2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1><span style="margin-right:25px;cursor:pointer;" onClick="window.history.back()"><i class="fas fa-hand-point-left"></i></span>Track your tasks fulfillment during the month</h1>
+  <div class="clock">
+    <div class="hand seconds"></div>
+    <div class="hand minutes"></div>
+    <div class="hand hours"></div>
+    <div class="number number1"><span class='span1'>-</span></div>
+    <div class="number number2"><span class='span2'>-</span></div>
+    <div class="number number3"><span class='span3'>III</span></div>
+    <div class="number number4"><span class='span4'>-</span></div>
+    <div class="number number5"><span class='span5'>-</span></div>
+    <div class="number number6"><span class='span6'>VI</span></div>
+    <div class="number number7"><span class='span7'>-</span></div>
+    <div class="number number8"><span class='span8'>-</span></div>
+    <div class="number number9"><span class='span9'>IX</span></div>
+    <div class="number number10"><span class='span10'>-</span></div>
+    <div class="number number11"><span class='span11'>-</span></div>
+    <div class="number number12"><span class='span12'>XII</span></div>
+  </div>
+
+  <div id="container"></div>
+
+  <div class="todoList">
+    <h2>Instruction</h2>
+    <p>You can track your tasks during a month by putting amount of hours, dedicated to a specific task, to a calendar.</p>
+    <ul>
+        <li>Type hours in Time column</li>
+        <li>Mark check if you want to save it</li>
+        <li>Every check mark adds extra green tone to a day</li>
+        <li>By default date is today</li>
+        <li>Click Change date to indicate specific date</li>
+        <li>Click Save button</li>
+        <li>All tasks per one day are checked - the day is covered in Lilac</li>
+    </ul>
+  </div>
+</body>
+</html>
+
+

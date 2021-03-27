@@ -1,0 +1,47 @@
+<html lang="en" data="htmltag">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title data="foodTitle">Food APP</title>
+  <link rel="stylesheet" href="food.css">
+  <link rel="icon" href="foodicon.svg">
+  <script src="food.js" defer></script>
+  <script type="module" src="..\./multiLang.js" defer></script>
+</head>
+<body>
+  <div class="main-grid">
+    <div class="head">
+
+      <select class="langSelect" name="lang">
+        <option value="en">en</option>
+        <option value="ru">ru</option>
+      </select>
+
+      <h1 data="foodApp">Food recipes</h1>
+    </div>
+
+    <div class="left">
+      <a onclick="javascript:history.go(-1);return false;" id='home-link' data="homeFood">Back</a><br>
+      <p data="foodPar" id="leftPar">Our recipes are created to cater to all cooking levels and styles. From a one-minute weekday breakfast to a delicious two-course dinner made with your own hands, our recipes cater to everyone.
+      <p>
+    </div>
+    
+    <div class="middle">
+      <h4 data="midH4food">Find and choose meals</h4>
+      <p data="foodMidPar">
+        Choose from a variety of healthy, delicious meals that accommodate your dietary preferences.
+      </p>
+      <div id="mid-input">
+        <input type="text" data="inpFood" placeholder="input meal" id="meal-input" onfocus="this.value=''">
+        <button id="search-meal" data="searchFood">search</button>
+      </div>
+      <div id="food-holder"></div>
+    </div>
+
+    <div class="footer">
+      <h2 data="copyrightFood">Enjoy your meal</h2>
+    </div>
+  </div>  
+</body>
+</html>

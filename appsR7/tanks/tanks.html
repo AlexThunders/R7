@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="tanks.css">
+    <script src="https://kit.fontawesome.com/f3b0be53d2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./335066.svg">
+    <script type="module" src="./tanks.js" defer></script>
+    <script type="module" src="/appsR7/multiLang.js" defer></script>
+    <title data="tanksTitle">Tanks</title>
+  </head>
+  <body>
+
+      <div class="field">
+        
+        <div id="instruction">
+          <select class="langSelect" name="lang">
+            <option value="en">en</option>
+            <option value="ru">ru</option>
+          </select>
+          
+          <h1 data="tanksH1">TANKS</h1>
+          <h2 data="tanksH2">Instruction</h2>
+          <p data="tanksMainP">
+            The goal is to destroy enemy tanks as many as possible.<br>
+            They can hit you. If your tank is exploded, the game is over.<br>
+            You can not destroy ground cannons but they can hit you.<br>
+            The hit is counted only when shells fall on you or enemies from above.<br>
+            <i style="font-weight: 900; text-decoration: underline;">To pause the game or go to Home page press "ESC"</i><br>
+            To rotate the cabin to the right press key "C"<br>  
+            To rotate the cabin to the left press key "Z"<br>  
+            To move left press key "LEFT"<br>  
+            To move right press key "RIGHT"<br>  
+            To move up press key "UP"<br>  
+            To move down press key "DOWN"<br>  
+            To shot fire press key "SPACE"<br>  
+            GOOD LUCK!
+          </p>
+          <h3 data="tanksH3">Enter players name:</h3>
+          <input type="text" id="inp" autocomplete="off">
+          <button id="startGame" data="tanksStartBtn">LET'S START!</button>
+          <a onclick="javascript:history.go(-1);return false;" id="homepage" data="tanksHome">Back</a>
+        </div>
+    
+    <img src="terrain.jpg" alt="bground" id='terrain'>
+    <img src="fogdark.jpg" alt="clouds" id='clouds'>
+    
+    <div class="myOwn tank">
+      <div class="cabin"></div>
+      <div class="mygun gun"></div>
+    </div>
+    <div class="tank enemy">
+      <div class="cabin"></div>
+      <div class="gun"></div>
+    </div>
+    <div class="cannon can1">
+      <div class="cannon-tower tower1">
+        <div class="cannon-gun gun1"></div>
+        <div class="cannon-gun gun2"></div>
+      </div>
+    </div>
+    <div class="cannon can2">
+      <div class="cannon-tower tower2">
+        <div class="cannon-gun gun1"></div>
+        <div class="cannon-gun gun2"></div>
+      </div>
+    </div>
+    <div class="cannon can3">
+      <div class="cannon-tower tower3">
+        <div class="cannon-gun gun1"></div>
+        <div class="cannon-gun gun2"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

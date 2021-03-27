@@ -1,0 +1,198 @@
+* {box-sizing:border-box;}
+
+body {
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  z-index: -2;
+  width:100vw;
+  height:100vh;
+  background:linear-gradient(to top,rgb(39, 110, 39), rgb(178, 178, 230));
+  background-repeat:no-repeat;
+}
+
+#intro {
+  display: inline-block;
+  width: 80%;
+  position: absolute;
+  text-align: justify;
+  text-indent: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3em;
+  top: 30%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color:white;
+  text-shadow: 0 0 35px black,0 0 35px black,0 0 15px black,
+  0 0 15px black,0 0 15px black,0 0 35px black;
+  background-color: black;
+  text-align: center;
+  opacity: .9;
+}
+
+#home_icon {
+  margin:0 30px 0 0;
+  padding:10px;
+  height:70px;
+  width: 70px;
+  opacity: .7;
+}
+
+#home_icon:hover {
+  opacity:1;
+}
+
+header h1 {
+  font-size: 1.3em;
+  font-weight: 800;
+  margin:0;
+}
+
+header h1:hover {
+  transition: .7s;
+  color: red; 
+  text-shadow: 0 0 15px white,0 0 15px white,0 0 15px white,
+  0 0 15px white,0 0 15px white,0 0 15px white;
+}
+
+/*WEATHER APP*/
+
+fieldset {
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  margin: auto;
+  max-width: 800px;
+  min-height:100vh;
+  border:none;
+  display:none;
+}
+  
+fieldset p,span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+  margin-top: 10px;
+  padding:0;
+}
+  
+#tempPar, #feelslike {
+  visibility: hidden;
+  font-size: 1em;
+}
+
+#city {
+  text-transform: capitalize;
+}
+  
+input {
+  width:260px;
+  margin:10px 0 0;
+  font-size: 1.3em;
+  text-transform: capitalize;
+  font-style: italic;
+}
+  
+#submit {
+  margin:10px 0;
+  padding: 0 10px;
+  width:130px;
+  font-size: 1.2em;
+  background-color: rgb(161, 41, 41);
+  color: white;
+  font-style: normal;
+  transition: .3s;
+}
+  
+#submit:hover {
+  background-color: rgb(233, 203, 203);
+  color: rgb(119, 20, 20);
+}
+    
+#result4weather {
+  font-size: 1em;
+  margin: 0 0 0 10px;
+  padding:0;
+  position: absolute;
+  z-index: 2;
+}
+
+#result4weather:hover {
+  background-color: rgb(157, 228, 224);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+fieldset img {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+.icon {
+    position: absolute;
+    z-index: 1;
+    left: 53%;
+    top: 33%;
+    margin:0;
+    width:150px;
+    height:150px;
+}
+
+@media screen and (min-width:300px) {
+  header h1 {font-size: 1.6em;}
+}
+
+/*CHANGE LANGUAGE*/
+.langSelect {
+  opacity:.8;
+  margin-right:0px;
+  z-index:5;
+  background-color: rgb(31, 146, 47);
+  width: 40px;
+  text-align: center;
+}
+
+.langSelect:hover {
+  opacity:1;
+  background-color: rgb(10, 177, 32);
+}
+  
+/*VOICE RECOGNITION*/
+
+.microphone {
+  font-size: 1em;
+  line-height: 1em;
+  margin: 20px;
+  padding: 3px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 1px white;
+  transition: .3s;
+  outline: none;
+}
+
+.microphone:hover {
+  color: white;
+  text-shadow: 3px 1px 3px black;
+  cursor: pointer;
+}

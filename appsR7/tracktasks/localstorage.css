@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Engagement&family=Lemonada:wght@300&family=Liu+Jian+Mao+Cao&family=Ma+Shan+Zheng&display=swap');
+
+* {box-sizing: border-box;}
+
+body {
+  margin:0;
+  padding: 0;
+  background: linear-gradient(to bottom, rgb(224, 212, 255), lightyellow);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+:root {
+  --red: 255;
+  --green: 255;
+  --blue: 255;
+}
+h1,h2 {
+  text-align: center;
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+#container {
+  width:100%;
+  overflow: hidden;
+}
+
+.calendar {
+  margin: 10px 70px 10px 10px;
+  padding: 0;
+  max-width:100%;
+  display:grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: repeat(5,50px);
+  grid-gap:1px;
+  border:1px solid gray;
+  background-color: rgb(121, 110, 110);
+}
+
+.calendar>div {
+  background-color: rgb(var(--red), var(--green), var(--blue));
+  color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: relative;
+  transition: .5s;
+}
+
+.calendar>div {
+  cursor: pointer;
+}
+
+button {
+  margin:10px;
+  padding:2px 20px;
+  width:200px;
+  background-color: rgb(122, 49, 49);
+  color:white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transition: .4s;
+}
+
+button:hover {
+  color:black;
+  background-color: rgb(209, 202, 193);
+}
+.table1 {
+  max-width:100%;
+  margin:10px;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.table1 td {
+  height:28px;
+  border:1px solid gray;
+  text-align: center;
+}
+
+.table1 td:first-child {width:10%;}
+.table1 td:nth-child(3), td:nth-child(4) {width:20%;}
+
+.table1 tr:first-child {
+  background-color: silver;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  position: absolute;
+  padding:10px;
+  left:25%;
+  bottom: 60%;
+  z-index: 1;
+  width:120px;
+  height: auto;
+  border-radius: 10px;
+  background-color: rgb(var(--red), var(--green), var(--blue));
+  opacity:.9;
+  box-shadow: 5px 5px 10px gray;
+  display: none;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  display: none;
+}
+
+.card h4 {
+  text-align: center;
+  margin:0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin:5px 0;
+  padding:0;
+  font-size: .8rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.calendar>div:hover .card {display: block;}
+
+input {text-align: center;}
+
+/*CLOCK*/
+.clock {
+  position: relative;
+  margin: 0;
+  padding:0;
+  width:120px;
+  height: 120px;
+  z-index: 2;
+}
+
+.clock .number {
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  width:100%;
+  height:100%;
+  left:0; 
+  top:0;
+  transform: translate(-50%, -50%);
+  transform: rotate(var(--rotation));
+  color: rgb(36, 33, 33);
+}
+
+.clock .number span {
+  font-size: .8em;
+  position:absolute;
+  transform: rotate(var(--rotateNumber));
+  --rotateNumber: 0;
+  font-weight: bold;
+}
+
+.clock .number1 {--rotation: 30deg;}
+.clock .number2 {--rotation: 60deg;}
+.clock .number3 {--rotation: 90deg;}
+.clock .number4 {--rotation: 120deg;}
+.clock .number5 {--rotation: 150deg;}
+.clock .number6 {--rotation: 180deg;}
+.clock .number7 {--rotation: 210deg;}
+.clock .number8 {--rotation: 240deg;}
+.clock .number9 {--rotation: 270deg;}
+.clock .number10 {--rotation: 300deg;}
+.clock .number11 {--rotation: 330deg;}
+
+.clock .number1 .span1 {--rotateNumber: 90deg; font-size: 1.1em;}
+.clock .number2 .span2 {--rotateNumber: 90deg; font-size: 1.1em;}
+.clock .number3 .span3 {--rotateNumber: -90deg; font-size: .8em;}
+.clock .number4 .span4 {--rotateNumber: 90deg; font-size: 1.1em;}
+.clock .number5 .span5 {--rotateNumber: 90deg; font-size: 1.1em;}
+.clock .number6 .span6 {--rotateNumber: -180deg; font-size: .8em;}
+.clock .number7 .span7 {--rotateNumber: 90deg; font-size: 1.1em;}
+.clock .number8 .span8 {--rotateNumber: 90deg; font-size: 1.1em;}
+.clock .number9 .span9 {--rotateNumber: -270deg; font-size: .8em;}
+.clock .number10 .span10 {--rotateNumber: 90deg; font-size: 1.1em;}
+.clock .number11 .span11 {--rotateNumber: 90deg; font-size: 1.1em;}
+
+.clock .hand {
+  position: absolute;
+  bottom:50%; 
+  transform-origin: bottom;
+  transform:rotate(calc(var(--rotation) * 1deg));
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.clock .seconds {
+  width: 2px;
+  height: 41%;
+  background-color: red;
+  z-index:5;
+  left:50%;
+  transform: translateX(-50%);
+  transform:rotate(calc(var(--rotation) * 1deg));
+  }
+
+.clock .minutes {
+  width:4px;
+  height:42%;
+  background-color: black;
+  z-index: 3;
+  left:50%;
+  transform: translateX(-50%);
+  transform:rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock .hours {
+  width:5px;
+  height:32%;
+  background-color: black;
+  left:50%;
+  transform: translateX(-50%);
+  transform:rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock .seconds::before {
+  content: '';
+  position: absolute;
+  width:12px;
+  height:12px;
+  border-radius: 50%;
+  background-color:black;
+  z-index: 117;
+  top:100%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+/*TODO LIST*/
+
+.todoList {
+  margin:20px;
+}
+
+.todoList p {
+  text-align: justify;
+  text-indent: 40px;
+}
