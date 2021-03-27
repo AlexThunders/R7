@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title data="memTitle">Memory game</title>
+  <link rel="stylesheet" href="memory.css">
+  <link rel="icon" href="./memoryIcon.svg">
+  <script src="https://kit.fontawesome.com/f3b0be53d2.js" crossorigin="anonymous"></script>
+  <script src="./memory.js"></script>
+  <script type="module" src="..\./multiLang.js"></script>
+</head>
+<body>
+
+  <div id="instruction">
+    <a onclick="javascript:history.go(-1);return false;" class="backLink" data="mHomeLink"><i class="fas fa-hand-point-left"></i></a>
+    <a class="homeLink" id="homePage" href="https://alexthunders.ru"><i class="fas fa-home"></i></a>
+
+    <select class="langSelect" name="lang">
+      <option value="en">en</option>
+      <option value="ru">ru</option>
+    </select>
+
+    <h1 data="memH1">Memory game</h1>
+    <p data="memP">Flip cards to find match</p>
+    <a id="start" data="memStart">Start</a>
+  </div>
+
+  <div class="memory-game">
+    <div class='card' data-value="1">
+      <img class="front" src="Islands1190-400x200.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="1">
+      <img class="front" src="Islands1190-400x200.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="2">
+      <img class="front" src="torontobeach.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="2">
+      <img class="front" src="torontobeach.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="3">
+      <img class="front" src="torontoducks.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="3">
+      <img class="front" src="torontoducks.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="4">
+      <img class="front" src="Toronto-Island.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="4">
+      <img class="front" src="Toronto-Island.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="5">
+      <img class="front" src="Toronto-Islands__GettyImages-885350470.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+    <div class='card' data-value="5">
+      <img class="front" src="Toronto-Islands__GettyImages-885350470.jpg" alt="img">
+      <img class="back" src="lost.jpg" alt="img">
+    </div>
+  </div>
+</body>
+</html>
